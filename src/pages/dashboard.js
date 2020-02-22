@@ -45,7 +45,7 @@ const Dashboard = () => {
 
   return (
     <Layout>
-      <Profile />
+      <Profile showModal={showModal} />
       <Router>
         <RouteBase path="/dashboard/base" />
         <RouteSecret path="/dashboard/secret" />
