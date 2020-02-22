@@ -9,6 +9,7 @@ import Profile from "../components/profile";
 import RouteBase from "../components/route-base";
 import RouteSecret from "../components/route-secret";
 import RouteLogin from "../components/route-login";
+import RoutePrivate from "../components/route-private";
 
 const INITIAL_STATE = {
   loginStatus: false,
@@ -47,8 +48,8 @@ const Dashboard = () => {
     <Layout>
       <Profile showModal={showModal} />
       <Router>
-        <RouteBase path="/dashboard/base" />
-        <RouteSecret path="/dashboard/secret" />
+        <RoutePrivate path="/dashboard/base" component={RouteBase} />
+        <RoutePrivate path="/dashboard/secret" component={RouteSecret} />
         <RouteLogin path="/dashboard/login" showModal={showModal} />
       </Router>
       <IdentityModal
